@@ -1,0 +1,81 @@
+@charset "UTF-8";
+#fade {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	height: 600px;
+	text-align: left;
+	overflow: hidden;
+	position: relative;
+}
+ 
+#fade img {
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+p {
+	text-align:center;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	background-size:cover;	
+}
+
+#floating-menu {
+    position: absolute;
+	margin: 0 auto;
+    width: 50px;
+    top: 400px;
+    left: 82%;
+    z-index: 9999;
+}
+
+.contents img:hover {
+	opacity: 0.7;	
+}
+.gmap {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+ 
+.gmap iframe,
+.gmap object,
+.gmap embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section table {
+	 width: 100%;
+}
+
+section th, section td {
+	padding: 15px; border: 1px solid #ddd;
+}
+section th {
+	background: #f4f4f4;
+}
+
+.ctable th { width: 20%; text-align: left; }
+ 
+@media only screen and (max-width:480px){
+    .ctable { margin: 0 -10px; }
+    .ctable th,
+    .ctable td{
+        width: 100%;
+        display: block;
+        border-top: none;
+    }
+    .ctable tr:first-child th   { border-top: 1px solid #ddd; }
+}

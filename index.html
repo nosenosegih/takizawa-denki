@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>有限会社 瀧澤興業</title>
+
+    <!-- bxslider CSS -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+
+    <!-- Style CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- bxSlider -->
+    <script src="js/jquery.bxslider.min.js"></script>
+
+    <!-- jQuery Sticky -->
+    <script src="js/jquery.sticky.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".bxslider").bxSlider({
+          mode: "fade",
+          speed: 1000,
+          startSlide: 0,
+          auto: true,
+          autoControls: false,
+          captions: false,
+        });
+      });
+
+      // メニューバー用
+      $(window).load(function () {
+        $("#sticky-menubar").sticky({ topSpacing: 0 });
+      });
+    </script>
+
+    <!-- media-queries.js -->
+    <!--[if lt IE 9]>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <!-- html5.js -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+      .video {
+        position: fixed;
+        display: grid;
+        place-items: center;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 1s;
+        background-color: black;
+        z-index: 9999 !important;
+      }
+
+      .video__hide {
+        top: 50%;
+        left: 50%;
+        height: 0%;
+        width: 0%;
+        opacity: 0;
+      }
+
+      .video__show {
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+      }
+
+      .entrance-video-body {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .p-0 {
+        padding: 0%;
+      }
+
+      .z-index-forced {
+        z-index: 9999 !important;
+      }
+
+      .modal__fullscreen {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .modal-dialog__fluid {
+        max-width: inherit;
+        max-height: 800px;
+        width: 90%;
+        height: 90%;
+        margin: 5% auto;
+      }
+
+      .modal-content__fluid {
+        width: 100%;
+        height: 100%;
+      }
+
+      .modal-body__center {
+        max-height: calc(100% - 160px);
+        height: 100%;
+        width: 100%;
+        /* width: 100%;
+        height: 100%; */
+      }
+
+      .sdgs-video {
+        /* max-height: calc(100% - 120px); */
+        width: 100%;
+        height: 100%;
+      }
+
+      .entrance-video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .relative {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <a name="top"></a>
+    <!-- トップへ戻る-->
+    <div id="floating-menu">
+      <input
+        type="image"
+        id="pagetop"
+        src="images/pagetop.png"
+        style="outline: none"
+        width="60"
+        height="60"
+      />
+    </div>
+    <!-- HEADER -->
+    <header>
+      <div class="slider">
+        <ul class="bxslider">
+          <li>
+            <img class="img-responsive" src="images/top_01.jpg" alt="top01" />
+          </li>
+          <li>
+            <img class="img-responsive" src="images/top_02.jpg" alt="top02" />
+          </li>
+          <li>
+            <img class="img-responsive" src="images/top_03.jpg" alt="top03" />
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- / HEADER -->
+
+    <nav class="navbar navbar-default">
+      <div id="sticky-menubar" style="z-index: 8000">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="index.html"
+              ><img
+                class="img-responsive"
+                src="images/logo.jpg"
+                alt="logo"
+                style="padding-left: 5px"
+            /></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">top</a></li>
+              <li><a href="company/index.html">企業情報</a></li>
+              <li><a href="careers/index.html">新卒求人案内</a></li>
+              <li><a href="contact/index.html">お問い合わせ</a></li>
+              <li><a href="access/index.html">ACCESS</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+    </nav>
+
+    <!-- 業務内容 -->
+    <div class="row" style="padding-top: 20px; padding-bottom: 20px">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/business_r.jpg" />
+        <img class="img-responsive" src="images/business2.jpg" alt="business" />
+      </picture>
+    </div>
+    <br />
+
+    <!-- 企業情報 -->
+    <div style="padding-top: 5%; padding-bottom: 2%">
+      <img class="img-responsive" src="images/corporate_bar.jpg" alt="bar02" />
+    </div>
+    <div class="row">
+      <a id="corporate_information_link" href="company/index.html">
+        <picture>
+          <source media="(max-width: 767px)" srcset="images/corporate_r.jpg" />
+          <img
+            class="img-responsive"
+            src="images/corporate.jpg"
+            alt="business"
+          />
+        </picture>
+      </a>
+    </div>
+    <br />
+
+    <!-- 求人案内 -->
+    <div style="padding-top: 5%; padding-bottom: 2%">
+      <img class="img-responsive" src="images/sdgs_bar.jpg" alt="bar02" />
+    </div>
+    <div class="row">
+      <div id="sdgs_left_block" class="col-sm-6 static">
+        <video id="sdgs_video" class="sdgs-video" controls>
+          <source src="./video/sdgs.mp4" type="video/mp4" />
+          滝沢興業で取り組んでいるSDGsを紹介しています
+        </video>
+      </div>
+      <div class="col-sm-6 static">
+        <img class="img-responsive" src="images/sdgs.jpg" alt="sdgs" />
+      </div>
+    </div>
+
+    <div style="padding-bottom: 15%"></div>
+
+    <!-- FOOTER -->
+    <footer class="well">
+      <!-- フッターロゴ -->
+      <div>
+        <img
+          class="img-responsive"
+          src="images/footer_logo.png"
+          alt="footer_logo"
+          style="margin: auto"
+        />
+      </div>
+      <br /><br /><br />
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center col-lg-4">
+            <p>ADDREES<br />〒950-3131&nbsp;新潟県新潟市北区濁川250番地</p>
+          </div>
+          <div class="col-sm-12 text-center col-lg-4">
+            <p>TELEPHONE<br /><a href="tel:0252886780">025-288-6780</a></p>
+          </div>
+          <div class="col-sm-12 col-lg-4 text-center">
+            <p>
+              E-MAIL<br /><a href="mailto:ytk@takizawa-denki.com"
+                >ytk@takizawa-denki.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- / FOOTER -->
+
+    <!-- モーダル・ダイアログ -->
+    <div
+      class="modal modal__center modal__fullscreen fade z-index-forced"
+      id="sdgs_modal"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog__fluid">
+        <div class="modal-content modal-content__fluid">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span>×</span>
+            </button>
+            <h4 class="modal-title">滝沢興業におけるSDGsへの取り組み</h4>
+          </div>
+          <div class="modal-body modal-body__center"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="video_section" class="video video__hide">
+      <video id="entrance_video" class="entrance-video">
+        <source src="./video/entrance.mp4" type="video/mp4" />
+        ページ移動します。mp4ファイル対応ブラウザの場合は移動中にアニメーションが流れます。
+      </video>
+    </section>
+
+    <script>
+      // 最初は非表示
+      $("#pagetop").hide();
+
+      //フローティングボタン用
+      $(document).ready(function () {
+        var pagetop = $("#pagetop");
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+          } else {
+            pagetop.fadeOut();
+          }
+        });
+        $("#pagetop").bind("click", function () {
+          $("body, html").animate({ scrollTop: 0 }, 800);
+          return false;
+        });
+      });
+
+      $(document).ready(function () {
+        var speed = 1000;
+        var menu = $("div#floating-menu");
+        var offset = menu.offset().top; // フローティングメニューの位置
+        var left_offset = $(window).width() - 100;
+        //スクロール時のイベント処理
+        $(window).scroll(function () {
+          var scrollAmount = $(window).scrollTop();
+          var newPosition = offset + scrollAmount;
+          menu.stop().animate({ top: newPosition }, speed);
+        });
+      });
+
+      // window.addEventListener('pageshow', e => {
+      //     if (window.performance.navigation.type == 2 || e.persisted) location.reload();
+      // });
+
+      const video = $("#entrance_video")[0];
+      const videoSection = $("#video_section");
+      const corporateInformationLink = $("#corporate_information_link");
+      // const initialClass = videoSection.classList.value;
+      const config = {
+        ratio: 16 / 9,
+        speed: 2,
+      };
+      let destination = "";
+
+      const startAnime = async (e) => {
+        destination = e.currentTarget.href;
+        e.preventDefault();
+
+        videoSection.removeClass("video__hide");
+        videoSection.addClass("video__show");
+
+        video.playbackRate = config.speed;
+        video.play();
+      };
+
+      corporateInformationLink.on("click", startAnime);
+
+      video.addEventListener("ended", () => {
+        $("body").animate(
+          {
+            opacity: 0,
+          },
+          400,
+          () => {
+            window.location.href = destination;
+          }
+        );
+      });
+
+      const sdgsVideo = $("#sdgs_video");
+
+      sdgsVideo.on("play", (e) => {
+        $(e.currentTarget).appendTo(".modal-body");
+        $("#sdgs_modal").modal();
+        $("#floating-menu").fadeOut();
+      });
+
+      $("#sdgs_modal").on("hidden.bs.modal", function () {
+        sdgsVideo[0].pause();
+        $("#floating-menu").fadeIn();
+        sdgsVideo.appendTo("#sdgs_left_block");
+      });
+
+      window.addEventListener("pagehide", () => {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>

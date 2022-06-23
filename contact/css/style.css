@@ -1,0 +1,80 @@
+@charset "UTF-8";
+body {
+	animation: fadeIn 2s ease 0s 1 normal;
+	-webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+p {
+	text-align:center;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	background-size:cover;	
+}
+
+#floating-menu {
+    position: absolute;
+	margin: 0 auto;
+    width: 50px;
+    top: 400px;
+    left: 82%;
+    z-index: 9999;
+}
+
+.tel_caption {
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+}
+.tel_caption2 {
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size: 16px;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.tel_number {
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size: 30px;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:5px;
+
+}
+.mail_caption {
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+}
+.mail_caption2 {
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size: 16px;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.mail {
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-size: 24px;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:10px;
+}
+

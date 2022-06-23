@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	animation: fadeIn 2s ease 0s 1 normal;
+	-webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+#floating-menu {
+    position: absolute;
+	margin: 0 auto;
+    width: 50px;
+    top: 400px;
+    left: 82%;
+    z-index: 9999;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+

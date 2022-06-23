@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>有限会社 瀧澤興業 アクセス</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<!-- JQuery ImageMap-->
+<script src="js/jquery.rwdImageMaps.min.js" type="text/javascript"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<a name="top"></a>
+<!-- トップへ戻る-->
+<div id="floating-menu">
+	<input type="image" id="pagetop" src="images/pagetop.png" style="outline:none;" width="60" height="60">
+</div>
+<!-- HEADER -->
+<header>
+    <img class="img-responsive" src="images/top.jpg" alt="top01" style="padding-top:66px; padding-bottom:30px;" >
+</header>
+<!-- / HEADER --> 
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+		<a href="../index.html"><img class="img-responsive" src="images/logo.jpg" alt="logo"></a> 
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../company/index.html">企業情報</a></li>
+        <li><a href="../careers/index.html">新卒求人案内</a></li>
+        <li><a href="../contact/index.html">お問い合わせ</a></li>
+        <li><a href="index.html">ACCESS</a></li>     
+      </ul>
+    </div>
+    </div>
+    <!-- /.navbar-collapse --> 
+  <!-- /.container-fluid --> 
+</nav>
+
+<!-- アクセス -->
+<div class="img-responsive">
+    <div class="gmap" align="center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786.7564683999208!2d139.15951884253096!3d37.929825995153884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff4cb3fd33debaf%3A0x7256e589194712d2!2z44CSOTUwLTMxMzEg5paw5r2f55yM5paw5r2f5biC5YyX5Yy65r-B5bed77yS77yV77yQ!5e0!3m2!1sja!2sjp!4v1467349909677" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </div>
+</div>
+<br>
+       
+<div style="padding-bottom: 15%;"></div>
+
+<br><br>
+
+<!-- FOOTER -->
+<footer class="well">
+    <!-- フッターロゴ -->    
+    <div align="center">
+        <img class="img-responsive" src="images/footer_logo.png" alt="footer_logo">
+    </div>
+	<br><br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center col-lg-4">
+	            <p>ADDREES<br>〒950-3131&nbsp;新潟県新潟市北区濁川250番地</p>
+            </div>
+            <div class="col-sm-12 text-center col-lg-4">
+    	        <p>TELEPHONE<br><a href="tel:0252886780">025-288-6780</a></p>
+            </div>
+            <div class="col-sm-12 col-lg-4 text-center">
+        	    <p>E-MAIL<br><a href="mailto:ytk@takizawa-denki.com">ytk@takizawa-denki.com</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / FOOTER -->
+<script type="text/javascript">
+	// 最初は非表示
+	$('#pagetop').hide();	
+	
+	
+	//フローティングボタン用
+	$(document).ready(function() {
+		var pagetop = $('#pagetop');
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				pagetop.fadeIn();
+			} else {
+				pagetop.fadeOut();
+			}
+		});
+		$("#pagetop").bind("click", function () {
+			$('body, html').animate({ scrollTop: 0 }, 800);
+			return false;
+		});
+	});
+	
+	$(document).ready( function() {
+		var speed = 1000;
+		var menu = $('div#floating-menu');
+		var offset = menu.offset().top; // フローティングメニューの位置
+		var left_offset =  $(window).width() -100;
+		//スクロール時のイベント処理
+		$(window).scroll(function(){
+			var scrollAmount = $(window).scrollTop();
+			var newPosition = offset + scrollAmount;
+			menu.stop().animate({top: newPosition}, speed);
+		});
+	});
+
+</script>
+
+</body>
+</html>
