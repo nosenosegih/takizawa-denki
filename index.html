@@ -8,12 +8,12 @@
 
     <!-- bxslider CSS -->
     <link rel="stylesheet" href="css/jquery.bxslider.css" />
-
-    <!-- Style CSS-->
-    <link rel="stylesheet" href="css/style.css?4564646" />
-
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
+    
+    <!-- Style CSS-->
+    <link rel="stylesheet" href="css/style.css?4564646" />
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -55,91 +55,6 @@
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
-    <style>
-      .video {
-        position: fixed;
-        display: grid;
-        place-items: center;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 1s;
-        background-color: black;
-        z-index: 9999 !important;
-      }
-
-      .video__hide {
-        top: 50%;
-        left: 50%;
-        height: 0%;
-        width: 0%;
-        opacity: 0;
-      }
-
-      .video__show {
-        top: 0%;
-        left: 0%;
-        height: 100%;
-        width: 100%;
-      }
-
-      .entrance-video-body {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .p-0 {
-        padding: 0%;
-      }
-
-      .z-index-forced {
-        z-index: 9999 !important;
-      }
-
-      .modal__fullscreen {
-        width: 100vw;
-        height: 100vh;
-      }
-
-      .modal-dialog__fluid {
-        max-width: inherit;
-        max-height: 800px;
-        width: 90%;
-        height: 90%;
-        margin: 5% auto;
-      }
-
-      .modal-content__fluid {
-        width: 100%;
-        height: 100%;
-      }
-
-      .modal-body__center {
-        max-height: calc(100% - 160px);
-        height: 100%;
-        width: 100%;
-        /* width: 100%;
-        height: 100%; */
-      }
-
-      .sdgs-video {
-        /* max-height: calc(100% - 120px); */
-        width: 100%;
-        height: 100%;
-      }
-
-      .entrance-video {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .static {
-        position: static;
-      }
-
-      .relative {
-        position: relative;
-      }
-    </style>
   </head>
   <body>
     <a name="top"></a>
@@ -172,7 +87,7 @@
     </header>
     <!-- / HEADER -->
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default z-1000">
       <div id="sticky-menubar" style="z-index: 8000">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -244,7 +159,7 @@
     <br />
 
     <!-- 求人案内 -->
-    <div style="padding-top: 5%; padding-bottom: 2%">
+    <div class="relative" style="padding-top: 5%; padding-bottom: 2%">
       <img class="img-responsive" src="images/sdgs_bar.jpg" alt="bar02" />
     </div>
     <div class="row">
