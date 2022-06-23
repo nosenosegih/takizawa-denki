@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/jquery.bxslider.css" />
 
     <!-- Style CSS-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?4564646" />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
@@ -176,7 +176,7 @@
       <div id="sticky-menubar" style="z-index: 8000">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
+          <div class="">
             <button
               type="button"
               class="navbar-toggle collapsed"
@@ -248,11 +248,13 @@
       <img class="img-responsive" src="images/sdgs_bar.jpg" alt="bar02" />
     </div>
     <div class="row">
-      <div id="sdgs_left_block" class="col-sm-6 static">
-        <video id="sdgs_video" class="sdgs-video" controls>
-          <source src="./video/sdgs.mp4" type="video/mp4" />
-          滝沢興業で取り組んでいるSDGsを紹介しています
-        </video>
+      <div id="" class="col-sm-6 static">
+        <div id="sdgs_background">
+          <video id="sdgs_video" class="sdgs-video opacity-0" controls playsinline>
+            <source src="./video/sdgs.mp4" type="video/mp4" />
+            滝沢興業で取り組んでいるSDGsを紹介しています
+          </video>
+        </div>
       </div>
       <div class="col-sm-6 static">
         <img class="img-responsive" src="images/sdgs.jpg" alt="sdgs" />
@@ -318,7 +320,7 @@
     </div>
 
     <section id="video_section" class="video video__hide">
-      <video id="entrance_video" class="entrance-video">
+      <video id="entrance_video" class="entrance-video" playsinline>
         <source src="./video/entrance.mp4" type="video/mp4" />
         ページ移動します。mp4ファイル対応ブラウザの場合は移動中にアニメーションが流れます。
       </video>
@@ -399,7 +401,11 @@
       const sdgsVideo = $("#sdgs_video");
 
       sdgsVideo.on("play", (e) => {
-        $(e.currentTarget).appendTo(".modal-body");
+        const self = $(e.currentTarget);
+        self.animate({
+          opacity: 1,
+        }, 150, 'swing');
+        self.appendTo(".modal-body");
         $("#sdgs_modal").modal();
         $("#floating-menu").fadeOut();
       });
@@ -407,12 +413,18 @@
       $("#sdgs_modal").on("hidden.bs.modal", function () {
         sdgsVideo[0].pause();
         $("#floating-menu").fadeIn();
-        sdgsVideo.appendTo("#sdgs_left_block");
+        sdgsVideo.appendTo("#sdgs_background");
       });
 
-      window.addEventListener("pagehide", () => {
-        location.reload();
-      });
+      $('#sdgs_background').click( e => {
+        $(e.currentTarget).css('background-image', 'none');
+      })
+
+      window.onpageshow = function (event) {
+        if (event.persisted) {
+          window.location.reload();
+        }
+      };
     </script>
   </body>
 </html>
